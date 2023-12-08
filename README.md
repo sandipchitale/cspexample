@@ -2,6 +2,12 @@
 
 This example explores CSP header.
 
+Add the following to `/etc/hosts`:
+
+```
+127.0.0.1 server1
+```
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 

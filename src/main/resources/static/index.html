@@ -1,14 +1,23 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' data: 'unsafe-inline' 192.168.86.106:8080 ;">
-    <title>CSP</title>
-</head>
-<body>
-    <h1>CSP Example</h1>
-    <p id="diditwork">Didn't work</p>
-    <script src="http://192.168.86.106:8080/script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta id="metacsp" http-equiv="Content-Security-Policy" content="default-src 'self' data: 'unsafe-inline' server1:* ;">
+        <title>CSP</title>
+    </head>
+    <body>
+        <h1>CSP Example</h1>
+        <hr>
+        <h5>Right click and View page source to see how JavaScript was loaded below!</h5>
+        <hr>
+        <h2>CSP:</h2>
+        <p id="csp">default-src 'self' data: 'unsafe-inline' server1:* ;</p>
+        <br/>
+        <h2>Did it work?</h2>
+        <p id="diditwork">Didn't work</p>
+        <hr>
+        <a target="_blank" href="https://github.com/sandipchitale/cspexample">Github</a>
+        <script src="http://server1:8080/script.js"></script>
+    </body>
 </html>
